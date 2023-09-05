@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-import 'pages/home_page.dart';
+import 'pages/login_page.dart';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});
@@ -10,9 +10,12 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        useMaterial3: true,
+        colorScheme: ColorScheme.fromSeed(
+                seedColor: const Color.fromARGB(255, 11, 2, 144))
+            .copyWith(background: Colors.black12),
       ),
-      home: const HomePage(),
+      home: const LoginPage(),
     );
   }
 }
